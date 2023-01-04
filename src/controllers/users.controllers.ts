@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 import UserModel from '../models/user.model';
-
+import signup from '../middleware/validation.middleware';
 const userModel = new UserModel();
 
 export const create = async (
@@ -10,7 +10,6 @@ export const create = async (
 ) => {
   try {
     const user = await userModel.create(req.body);
-    //res.set('Access-Control-Allow-Origin', '*')
     res.status(200).json({
       status: 'success',
       data: { ...user },

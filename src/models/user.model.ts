@@ -1,5 +1,6 @@
 import User from '../types/user.type';
 import db from '../database';
+import * as Validator from 'validatorjs';
 class UserModel {
   async create(u: User): Promise<User> {
     try {
