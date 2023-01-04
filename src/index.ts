@@ -2,12 +2,10 @@ import express, { Application, Request, Response } from 'express';
 import morgan from 'morgan';
 import helmet from 'helmet';
 import RateLimit from 'express-rate-limit';
-import * as dotenv from 'dotenv';
+import config from './config';
 import errorMiddleware from './middleware/error.middleware';
 
-dotenv.config();
-
-const PORT = process.env.PORT || 5000;
+const PORT = config.port || 5000;
 // create an instance server
 const app: Application = express();
 // middleware to parse incoming requests
