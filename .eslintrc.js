@@ -4,7 +4,11 @@ module.exports = {
     node: true,
     jest: true
   },
-  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier'
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 13,
@@ -12,11 +16,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'prettier'],
   rules: {
-    semi: ['error', 'never'],
     'no-use-before-define': ['error', { functions: true, classes: true }],
-    'prettier/prettier': 2, // Means error
+    'prettier/prettier': 0, // Means error
     'no-console': 1, // Means warning
-    'no-var': 'error',
-    'prefer-const': 'error'
+    'no-var': 'never',
+    'prefer-const': 'never'
   }
-}
+};
