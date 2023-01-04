@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/pg": "^8.6.6",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-rate-limit": "^6.7.0",
@@ -23,6 +24,7 @@
     "jasmine": "^3.10.0",
     "jasmine-spec-reporter": "^7.0.0",
     "morgan": "^1.10.0",
+    "pg": "^8.8.0",
     "supertest": "^6.1.6"
   },
   "devDependencies": {
